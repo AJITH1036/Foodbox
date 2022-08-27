@@ -1,0 +1,39 @@
+<div class="row">
+
+    <div class="card col-md-6 offset-md-3et-md-3">
+        <div class="row">
+            <h3 class="text-center">update food</h3>
+            <hr/>
+
+            <div class="card-body">
+            <form (ngSubmit)="onSubmit()">
+                <div>
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="name" [(ngModel)]="food.name" name="name">
+                </div>
+
+            <div>
+                <label>price</label>
+                <input type="number" class="form-control" id="price" [(ngModel)]="food.price" name="price">
+            </div>
+            <div>
+                <label>Cuisine</label>
+                <input type="text" class="form-control" id="cuisine" [(ngModel)]="food.cuisine" name="cuisine">
+            </div>
+            <div>
+                <label>Description</label>
+                <input type="text" class="form-control" id="description" [(ngModel)]="food.description" name="description">
+            </div>
+            <div>
+                <label>Offers</label>
+                <input type="text" class="form-control" id="offers" [(ngModel)]="food.offers" name="offers">
+            </div>
+        <br>
+        <button class="btn btn-success" type="submit">Submit</button>
+            </form>
+            
+            </div>
+            
+        </div>
+    </div>
+        </div>

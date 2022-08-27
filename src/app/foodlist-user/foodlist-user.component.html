@@ -1,0 +1,33 @@
+<div class = "row">
+    <h2> List of Foods </h2>
+</div>
+<div class="container">
+<form (ngSubmit)="onSubmit()">
+    <div>
+        <label>Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="food.name" name="name">
+    </div>
+    <br>
+        <button class="btn btn-success" type="submit">Submit</button>
+</form>
+</div>
+<table class="table table-striped table-bordered">
+    <thead class="bg-primary">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Cuisine</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let fo of f">
+            <td>{{fo.id}}</td>
+            <td>{{fo.name}}</td>
+            <td>{{fo.price}}</td>
+            <td>{{fo.cuisine}}</td>
+            <td>                
+                <button (click)="buyNow(fo.id)" class="bg-success text-white">Buy</button>
+            </td>
+</table>

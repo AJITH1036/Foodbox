@@ -1,0 +1,35 @@
+<div class = "row">
+    <h2> List of Foods </h2>
+</div>
+<div class="row" style="margin: 10px">
+<tr>
+    <button (click)="addFood()" class="bg-success text-white">Add Food</button>
+
+</tr>
+</div>
+
+<table class="table table-striped table-bordered">
+    <thead class="bg-primary">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Cuisine</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let f of food">
+            <td>{{f.id}}</td>
+            <td>{{f.name}}</td>
+            <td>{{f.price}}</td>
+            <td>{{f.cuisine}}</td>
+            <td>
+                
+                <button (click)="updateFood(f.id)" class="bg-success text-white">Edit</button>
+                <button (click)="getFoodById(f.id)" class="bg-primary text-white" style="margin-left: 10px">view</button> 
+                <button (click)="deleteFood(f.id)" class="bg-danger text-white" style="margin-left: 10px">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
